@@ -22,6 +22,6 @@ var createObject = function (id, prop, val) {
 		};	
 		items.push(item);
 	};
-
+	alert("table complete");
 	return items;
 };
