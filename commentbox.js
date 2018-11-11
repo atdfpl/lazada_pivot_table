@@ -1,10 +1,10 @@
 // Author: Tang Anh Huy (anhhuy.tang@lazada.com)
-function LoadCommentBox(box_height, id_comment_box) {
+function LoadCommentBox(bridge, id_comment_box, box_height) {
     id_comment_box = "#" + id_comment_box;
     var id_comment_tab = "#T" + Math.ceil(Math.random()*1000000);
     var id_new_box = "#B" + Math.ceil(Math.random()*1000000);
     var element = $(id_comment_box).detach();
-    Bridge.container.innerHTML = "<div id='" + id_comment_tab.substring(1) + "'></div>";
+    bridge.container.innerHTML = "<div id='" + id_comment_tab.substring(1) + "'></div>";
     $(id_comment_tab).append(element);
     $(id_comment_box).attr("id",id_new_box.substring(1));
     $(id_new_box).css("display", "");
