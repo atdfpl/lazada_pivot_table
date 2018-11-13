@@ -69,3 +69,14 @@ function fillColor(colorPositive, colorNegative, reverseToken) {
 		}
 	}
 }
+
+function formatNumber(format, colMinWidth) {
+	if (colMinWidth != null) {
+		$(".pvtTable th.pvtColLabel").css("min-width", colMinWidth + "px");
+	}
+	$(".pvtTable").find("tr").each(function() {
+		$(this).find('td').each(function() {
+			$(this).text(numeral($(this).text()).format(format));
+		});
+	});
+}
