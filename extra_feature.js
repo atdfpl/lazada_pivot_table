@@ -70,13 +70,27 @@ function fillColor(colorPositive, colorNegative, reverseToken) {
 	}
 }
 
-function formatNumber(format, colMinWidth) {
+function formatNumber(format, colMinWidth, applyToken) {
 	if (colMinWidth != null) {
-		$(".pvtTable th.pvtColLabel").css("min-width", colMinWidth + "px");
+	  $(".pvtTable th.pvtColLabel").css("min-width", colMinWidth + "px");
 	}
 	$(".pvtTable").find("tr").each(function() {
-		$(this).find('td').each(function() {
-			$(this).text(numeral($(this).text()).format(format));
-		});
+		var isApplied = false;
+		if (applyToken != null && applyToken != "") {
+			$(this).find('th:last').each(function() {
+				if($(this).text().indexOf(applyToken) != -1) {
+					isApplied = true;
+				}
+			});
+		}
+		else {
+			isApplied = true;
+		}
+		
+		if (isApplied) {
+		  $(this).find('td').each(function() {
+			  $(this).text(numeral($(this).text()).format(format));
+		  });
+		}
 	});
 }
