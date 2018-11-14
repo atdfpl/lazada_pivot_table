@@ -77,7 +77,7 @@ function formatNumber(format, colMinWidth, applyToken) {
 	$(".pvtTable").find("tr").each(function() {
 		var isApplied = false;
 		if (applyToken != null && applyToken != "") {
-			$(this).find('th:last').each(function() {
+			$(this).find('th').each(function() {
 				if($(this).text().indexOf(applyToken) != -1) {
 					isApplied = true;
 				}
