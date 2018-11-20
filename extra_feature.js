@@ -89,7 +89,9 @@ function formatNumber(format, colMinWidth, applyToken) {
 		
 		if (isApplied) {
 		  $(this).find('td').each(function() {
-			  $(this).text(numeral($(this).text()).format(format));
+			if($(this).text().indexOf("/") == -1 && $(this).text().trim() != "-") {
+				$(this).text(numeral($(this).text()).format(format));
+			}
 		  });
 		}
 	});
