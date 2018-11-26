@@ -23,6 +23,7 @@ function overwriteFbiLabel() {
 }
 
 $(".module-tabbar").find("li").click(function() {
+	setTimeout(function(){ overwriteFbiLabel(); }, 100);
 	setTimeout(function(){ overwriteFbiLabel(); }, 500);
 	setTimeout(function(){ overwriteFbiLabel(); }, 1000);
 	setTimeout(function(){ overwriteFbiLabel(); }, 2000);
@@ -31,6 +32,7 @@ $(".module-tabbar").find("li").click(function() {
 });
 
 $(".section-header").find("button").click(function() {
+	setTimeout(function(){ overwriteFbiLabel(); }, 100);
 	setTimeout(function(){ overwriteFbiLabel(); }, 500);
 	setTimeout(function(){ overwriteFbiLabel(); }, 1000);
 	setTimeout(function(){ overwriteFbiLabel(); }, 2000);
