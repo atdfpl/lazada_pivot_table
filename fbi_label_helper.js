@@ -22,4 +22,20 @@ function overwriteFbiLabel() {
 	});
 }
 
+$(".module-tabbar").find("li").click(function() {
+	setTimeout(function(){ overwriteFbiLabel(); }, 500);
+	setTimeout(function(){ overwriteFbiLabel(); }, 1000);
+	setTimeout(function(){ overwriteFbiLabel(); }, 2000);
+	setTimeout(function(){ overwriteFbiLabel(); }, 3000);
+	setTimeout(function(){ overwriteFbiLabel(); }, 5000);
+});
+
+$(".section-header").find("button").click(function() {
+	setTimeout(function(){ overwriteFbiLabel(); }, 500);
+	setTimeout(function(){ overwriteFbiLabel(); }, 1000);
+	setTimeout(function(){ overwriteFbiLabel(); }, 2000);
+	setTimeout(function(){ overwriteFbiLabel(); }, 3000);
+	setTimeout(function(){ overwriteFbiLabel(); }, 5000);
+});
+
 overwriteFbiLabel();
